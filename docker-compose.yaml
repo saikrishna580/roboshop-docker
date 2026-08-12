@@ -2,17 +2,17 @@ name: roboshop
 services:
   mongodb:
     build: ./mongodb
-    image: joindevops/mongodb:4.0.0 # docker build -t joindevops/mongodb:4.0.0
+    image: saikrishna580/mongodb:4.0.0 # docker build -t joindevops/mongodb:4.0.0
     container_name: mongodb # docker run -d --network roboshop joindevops/mongodb:4.0.0
   catalogue:
     build: ./catalogue
-    image: joindevops/catalogue:4.0.0
+    image: saikrishna580/catalogue:4.0.0
     container_name: catalogue
     depends_on:
     - mongodb
   frontend:
     build: ./frontend
-    image: joindevops/frontend:4.0.0
+    image: saikrishna580/frontend:4.0.0
     container_name: frontend
     ports:
     - "80:80"
