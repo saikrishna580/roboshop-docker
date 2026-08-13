@@ -78,7 +78,7 @@ services:
     volumes:
     - redis:/data 
   mysql:
-    image: joindevops/mysql:4.0.0
+    image: saikrishna580/mysql:4.0.0
     build: ./mysql
     container_name: mysql
     command: --mysql-native-password=ON --innodb-lock_wait_timeout=120
